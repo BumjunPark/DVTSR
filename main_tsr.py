@@ -14,7 +14,7 @@ from torchsummary import summary
 from tensorboardX import SummaryWriter
 
 # Training settings
-parser = argparse.ArgumentParser(description="PyTorch Temporal Super Resolution for Dynamic Real Dataset")
+parser = argparse.ArgumentParser(description="PyTorch Robust Temporal Super Resolution for Dynamic Motion Video")
 parser.add_argument("--batchSize", type=int, default=1, help="Training batch size. Default: 16")
 parser.add_argument("--nEpochs", type=int, default=100, help="Number of epochs to train for. Default: 100")
 parser.add_argument("--lr", type=float, default=1e-4, help="Learning Rate. Default=1e-4")
