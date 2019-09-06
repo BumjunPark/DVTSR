@@ -3,25 +3,20 @@ import torch
 from torch.autograd import Variable
 import numpy as np
 import time
-import scipy.io as sio
 import imageio
-from myssim import compare_ssim as cal_ssim
-from dataset_tsr_test import DatasetFromHdf5
-from torch.utils.data import DataLoader
 from matplotlib import pyplot as plt
 
-parser = argparse.ArgumentParser(description="PyTorch Densely Connected U-Net Test")
+parser = argparse.ArgumentParser(description="PyTorch Robust Temporal Super Resolution for Dynamic Motion Video")
 parser.add_argument("--cuda", action="store_true", help="Use cuda? Default: True")
-parser.add_argument("--model1", default="./model_epoch_17_iter_4860_PSNR0_24.4654_PSNR1_23.3505_PSNR2_24.3944_loss_0.12319932.pth", type=str, help="Model path")
-parser.add_argument("--model2", default="", type=str, help="Model path for model ensemble")
-parser.add_argument("--model3", default="", type=str, help="Model path for model ensemble")
-parser.add_argument("--name", default="F:/AIM2019/data/TSR_data/val_sampled_dummy", type=str, help="Test data path")
-parser.add_argument("--data", default="F:/AIM2019/data/TSR_data/val/val_total", type=str, help="Test data path")
-parser.add_argument("--gt", default="./data/gt_kodak_c.mat", type=str, help="GT data path")
+parser.add_argument("--model1", default="", type=str, help="Model path1")
+parser.add_argument("--model2", default="", type=str, help="Model path2")
+parser.add_argument("--model3", default="", type=str, help="Model path3")
+parser.add_argument("--name", default="", type=str, help="Test data name path")
+parser.add_argument("--data", default="", type=str, help="Test data path")
 parser.add_argument("--gpu", default='0', help="GPU number to use when testing. Default: 0")
-parser.add_argument("--result1", default="./result1/", type=str, help="Result path Default: ./result/")
-parser.add_argument("--result2", default="./result2/", type=str, help="Result path Default: ./result/")
-parser.add_argument("--result3", default="./result3/", type=str, help="Result path Default: ./result/")
+parser.add_argument("--result1", default="./result1/", type=str, help="Result path Default: ./result1/")
+parser.add_argument("--result2", default="./result2/", type=str, help="Result path Default: ./result2/")
+parser.add_argument("--result3", default="./result3/", type=str, help="Result path Default: ./result3/")
 
 opt = parser.parse_args()
 
@@ -233,7 +228,7 @@ for i in range(len(file_list)):
         imageio.imwrite(opt.result2 + name, out2)
         ens_output2 = ens_output2 * 255.0
         ens_output2 = np.uint8(np.round(ens_output2.transpose(1, 2, 0)))
-        imageio.imwrite(opt.result1 + ens_name, ens_output2)
+        imageio.imwrite(opt.result2 + ens_name, ens_output2)
     if opt.model3:
         out3 = out3 * 255.0
         out3 = np.uint8(np.round(out3.transpose(1, 2, 0)))
