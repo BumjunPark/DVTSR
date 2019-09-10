@@ -4,9 +4,9 @@ PyTorch Implementation of "[Robust Temporal Super-Resolution for Dynamic Motion 
 
 # Related work
 PyTorch Implementation of "[Densely Connected Hierarchical Network for Image Denoising](http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Park_Densely_Connected_Hierarchical_Network_for_Image_Denoising_CVPRW_2019_paper.pdf)", 
-second place winner of sRGB track and third place winner of Raw-RGB track is available in [here](https://github.com/BumjunPark/DHDN)    
+second place winner of sRGB track and third place winner of Raw-RGB track on [NTIRE 2019 Challenge on Real Image Denoising](http://www.vision.ee.ethz.ch/ntire19/). ([code](https://github.com/BumjunPark/DHDN))    
 
-PyTorch reimplementation of "[Optical Flow Estimation using a Spatial Pyramid Network](https://arxiv.org/abs/1611.00850)" by Simon Niklaus [code](https://github.com/sniklaus/pytorch-spynet)
+PyTorch reimplementation of "[Optical Flow Estimation using a Spatial Pyramid Network](https://arxiv.org/abs/1611.00850)" by Simon Niklaus. ([code](https://github.com/sniklaus/pytorch-spynet))
 
 # Dependencies
 Python 3.6    
