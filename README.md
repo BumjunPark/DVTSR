@@ -18,7 +18,7 @@ TensorBoardX
 TorchSummary
 
 # Data
-We used [REDS](https://seungjunnah.github.io/Datasets/reds.html) dataset for training.    
+We used [REDS](https://seungjunnah.github.io/Datasets/reds.html) VTSR dataset for training.    
 To generate training data, use the matlab code generate_train.m
 
 # Training
@@ -29,6 +29,7 @@ python main_tsr.py --lr 1e-4 --step 2 --cuda True --train_data0 ./train_data0.h5
 If you want to train t=1/4, change 9th line of the main_tsr.py to from model_tsr_14, import model_tsr    
 If you want to train t=1/2, change 9th line of the main_tsr.py to from model_tsr_12, import model_tsr    
 If you want to train t=3/4, change 9th line of the main_tsr.py to from model_tsr_34, import model_tsr    
+Also, you have to give right label for the target time.    
 There are other options you can choose.    
 Please refer to the code.  
 
