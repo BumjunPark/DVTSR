@@ -36,7 +36,7 @@ Please refer to the code.
 # Test
 As an example, use the following command to use our test codes
 ```
-python test_tsr.py --cuda True --model0 ./mode0.pth --data ./path/to/data --gpu 0 --result0 ./result0/
+python test_tsr.py --cuda True --model0 ./model0.pth --data ./path/to/data --gpu 0 --result0 ./result0/
 ```
 There are other options you can choose.    
 Please refer to the code.
