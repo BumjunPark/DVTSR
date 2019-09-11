@@ -31,7 +31,7 @@ If you want to train t=1/2, change 9th line of the main_tsr.py to from model_tsr
 If you want to train t=3/4, change 9th line of the main_tsr.py to from model_tsr_34, import model_tsr    
 Also, you have to give right label for the target time.    
 There are other options you can choose.    
-Please refer to the code.  
+Please refer to the code.
 
 # Test
 As an example, use the following command to use our test codes
@@ -40,6 +40,8 @@ python test_tsr.py --cuda True --model0 ./model0.pth --data ./path/to/data --gpu
 ```
 There are other options you can choose.    
 Please refer to the code.
+
+To use our pretrained model, please download [here](https://drive.google.com/open?id=1sRPcclDIV5BgGxf0yStfFtOL1gl66Mgn)
 
 # Contact
 If you have any question about the code or paper, please feel free to contact kkbbbj@gmail.com
